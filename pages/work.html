@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/portraits/img-3.png">
+    <title>
+      Work | ZEENATH
+    </title>
+    <meta name="author" content="Codegrid" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/work.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <div class="logo-wrapper">
+        <a href="../index.html">Zeenath<br />Abuthalib</a>
+      </div>
+    </div>
+    <!-- toggle btn -->
+    <div class="btn" id="toggle-btn">
+      <div class="btn-outline btn-outline-1"></div>
+      <div class="btn-outline btn-outline-2"></div>
+      <div id="hamburger">
+        <span></span>
+      </div>
+    </div>
+
+    <!-- svg overlay -->
+    <div class="overlay">
+      <svg viewBox="0 0 350 1000">
+        <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+      </svg>
+    </div>
+
+    <!-- menu items -->
+    <div class="menu">
+      <div class="primary-menu">
+        <div class="menu-container">
+          <div class="wrapper">
+            <div class="menu-item">
+              <a href="../index.html"><span>I</span>Home</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="./work.html"><span>II</span>Work</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="about.html"><span>III</span>Skills</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-menu">
+        <div class="menu-container">
+          <div class="wrapper">
+            <div class="menu-item">
+              <a href="./speaker.html">Profile</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="Zeenath Abuthlib.CV.pdf" download>Download My CV</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="./contact.html">Contact</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-scroll-container class="smoothScroll">
+      <div class="content-container">
+        <section class="slide">
+          <a href="./projects/project.html">
+            <article class="content">
+              <h2>1</h2>
+              <h3>UNILEVER</h3>
+              <p>PLACE NUMBER - 02<br />Driving Success</p>
+            </article>
+          </a>
+        </section>
+        <section class="slide">
+          <a href="./projects/projectBelgium.html">
+            <article class="content">
+              <h2>2</h2>
+              <h3>white2net</h3>
+              <p>FREELANCE CYBER SECURITY ANALYST<br /> Belgium</p>
+            </article>
+          </a>
+        </section>
+        <section class="slide">
+          <a href="./projects/projectUS.html">
+            <article class="content">
+              <h2>3</h2>
+              <h3>Beautiful India</h3>
+              <p>CONTENT CREATOR & DESIGNER <br>FOR CYBERSECURITY GRC<br />United States</p>
+            </article>
+          </a>
+        </section>
+        <section class="slide">
+          <a href="./projects/projectKenya.html">
+            <article class="content">
+              <h2>4</h2>
+              <h3>WORK PAY</h3>
+              <p>DIGITAL FORENSICS REPORT FOR WEBSITE<br />Kenya</p>
+            </article>
+          </a>
+        </section>
+        <section class="slide">
+          <a href="./projects/projectMacedoni.html">
+            <article class="content">
+              <h2>5</h2>
+              <h3>Intern healthcare</h3>
+              <p>JUNIOUR NETWORK ADMINISTRATOR<br />Macedonia</p>
+            </article>
+          </a>
+        </section>
+        <section class="slide">
+          <a href="./projects/projectSriLanka.html">
+            <article class="content">
+              <h2>6</h2>
+              <h3>NCISL</h3>
+              <p>FREELANCE CYBER SECURITY ANALYST<br />Sri Lanka</p>
+            </article>
+          </a>
+        </section>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
+  <script>
+    gsap.to(".content-container", 1, {
+      delay: 1,
+      opacity: 1,
+    });
+
+    window.addEventListener("load", (event) => {
+      let locoScrollDefaults = {
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+        direction: "horizontal",
+      };
+      let locoScroll = new LocomotiveScroll(locoScrollDefaults);
+
+      // GSAP integration
+      gsap.registerPlugin(ScrollTrigger);
+
+      locoScroll.on("scroll", ScrollTrigger.update);
+
+      ScrollTrigger.scrollerProxy(".smoothScroll", {
+        scrollTop(value) {
+          return arguments.length
+            ? locoScroll.scrollTo(value, 0, 0)
+            : locoScroll.scroll.instance.scroll.y;
+        },
+        scrollLeft(value) {
+          return arguments.length
+            ? locoScroll.scrollTo(value, 0, 0)
+            : locoScroll.scroll.instance.scroll.x;
+        },
+
+        getBoundingClientRect() {
+          return {
+            top: 0,
+            left: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+        },
+
+        pinType: document.querySelector(".smoothScroll").style.transform
+          ? "transform"
+          : "fixed",
+      });
+
+      // Add smooth drag functionality
+      Draggable.create(".smoothScroll", {
+        type: "x",
+        trigger: ".smoothScroll",
+        edgeResistance: 0.5,
+        bounds: ".smoothScroll",
+        throwProps: true,
+        onDrag: function () {
+          locoScroll.update();
+        },
+        onThrowUpdate: function () {
+          locoScroll.update();
+        },
+      });
+    });
+  </script>
+</html>
