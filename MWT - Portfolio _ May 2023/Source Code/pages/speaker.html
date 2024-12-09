@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/portraits/img-3.png">
+    <title>
+      Profile | ZEENATH
+    </title>
+    <meta name="author" content="HARRNISH | CODEGRID" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/speaker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body>
+    <div class="logo">
+      <div class="logo-wrapper">
+        <a href="../index.html">Zeenath<br />Abuthalib</a>
+      </div>
+    </div>
+    <!-- toggle btn -->
+    <div class="btn" id="toggle-btn">
+      <div class="btn-outline btn-outline-1"></div>
+      <div class="btn-outline btn-outline-2"></div>
+      <div id="hamburger">
+        <span></span>
+      </div>
+    </div>
+
+    <!-- svg overlay -->
+    <div class="overlay">
+      <svg viewBox="0 0 350 1000">
+        <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+      </svg>
+    </div>
+
+    <!-- menu items -->
+    <div class="menu">
+      <div class="primary-menu">
+        <div class="menu-container">
+          <div class="wrapper">
+            <div class="menu-item">
+              <a href="../index.html"><span>I</span>Home</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="./work.html"><span>II</span>Work</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="./about.html"><span>III</span>Skill</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-menu">
+        <div class="menu-container">
+          <div class="wrapper">
+            <div class="menu-item">
+              <a href="./speaker.html">Profile</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="Zeenath Abuthlib.CV.pdf">Download My CV</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+
+            <div class="menu-item">
+              <a href="./contact.html">Contact</a>
+              <div class="menu-item-revealer"></div>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" data-scroll-container>
+      <div class="site-content">
+        <section class="speaker-hero" data-scroll-section>
+          <div class="speaker-hero-header">
+            <h1>Zeenath <span>Analyst</span></h1>
+          </div>
+          <div class="speaker-intro">
+            <p>
+              I am a student with strong expertise in digital security,
+              threat analysis, and network protection. I have hands-on
+              experience performing vulnerability assessments, running
+              penetration tests, and implementing robust security
+              measures to protect digital systems. My skill set includes
+              identifying potential risks, mitigating threats, and
+              optimizing security protocols to ensure system integrity. I
+              am committed to staying up-to-date with the latest
+              cybersecurity trends and technologies. With a focus on
+              both security and user experience, I strive to develop
+              solutions that not only protect systems but also provide
+              seamless and safe interactions for users.
+            </p>
+          </div>
+        </section>
+        <section class="speaker-footer" data-scroll-section>
+          <div class="speaker-hero">
+            
+          </div>
+          <div class="speaker-footer-img">
+            <div class="speaker-img">
+              <img src="../assets/portraits/img-3.png" alt="" />
+            </div>
+           
+          </div>
+        </section>
+
+        <section class="topics" data-scroll-section>
+          <div class="topics-content">
+            <div class="topics-data">
+              <div class="topic">
+                <div class="index">I</div>
+                <div class="topic-name"><p>Protect</p></div>
+                <div class="topic-sub"><p>systems</p></div>
+              </div>
+              <div class="topic">
+                <div class="index">II</div>
+                <div class="topic-name"><p>Defend</p></div>
+                <div class="topic-sub"><p>data</p></div>
+              </div>
+              <div class="topic">
+                <div class="index">III</div>
+                <div class="topic-name"><p>Secure</p></div>
+                <div class="topic-sub"><p>networks</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="topics-about">
+            <p>
+              I’m a cybersecurity specialist passionate about protecting 
+              digital spaces and solving the puzzles of the online world. 
+              My work revolves around safeguarding data, building robust 
+              defenses, and staying ahead of the curve when it comes to 
+              evolving threats. When I’m not diving into security protocols 
+              or tracking vulnerabilities like a digital detective, you’ll 
+              find me exploring new hacking challenges, geeking out over 
+              emerging tech, or binge-watching the latest cyber-thrillers. 
+              My cybersecurity philosophy? Make it secure, keep it smart, 
+              and always add a touch of innovation. I’m the kind of security 
+              expert you want on your team if you want people to say, 
+              “That’s exactly the protection we needed!”
+            </p>
+          </div>
+        </section>
+        
+
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+        multiplier: 0.75,
+        scrollFromAnywhere: true,
+      });
+    });
+    setTimeout(() => {
+      scroll.update();
+    }, 3000);
+  </script>
+</html>
